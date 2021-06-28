@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+    
+    <div class="register-card">
+        <h1>Register now</h1>
+        <p id="display"></p>
+        <form id="form">
+            <input type="text" name="text" id="username" placeholder="Your name..." required>
+            <input type="password" name="password" id="password" placeholder="Your password" required>
+            <input type="email" name="email" id="email" placeholder="Your email">
+            <input type="file" name="file" id="fileImage">
+            <label>
+                <a class="login"href="/login">Sign in</a>
+                <button type="submit" id="button" class="button">Sing up</button>
+            </label>
+        </form>
+    </div>
+    
+    <script src="/js/request.js"></script>
+    <script src="/js/register.js"></script>
+</body>
+</html>

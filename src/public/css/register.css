@@ -1,0 +1,106 @@
+/* #391521 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #391521;
+}
+
+.register-card {
+    background-color: white;
+    padding: 30px;
+    width: 500px;
+}
+
+#display {
+    margin-top: 20px;
+    font-size: 17px;
+    color: red;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#username, #password, #email {
+    margin: 10px 0;
+    padding: 15px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px 0 black;
+    font-size: 20px;
+}
+
+#username::placeholder, #password::placeholder, #email::placeholder {
+    font-size: 15px;
+}
+
+#form label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.login {
+    color: rgb(69, 146, 235);
+    font-size: 20px;
+    transition: 0.3s;
+    font-weight: 555;
+}
+
+.login:hover {
+    color: #391521;
+}
+
+#button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #391521;
+    color: white;
+    cursor: pointer;
+}
+
+#profil_img {
+    margin-top: 20px;
+} 
+
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.custom-file-input::before {
+    content: 'Select profile image';
+    display: inline-block;
+    background: linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 19px;
+}
+.custom-file-input:hover::before {
+    border-color: black;
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}

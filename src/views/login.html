@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    
+    <div class="login-card">
+        <h1>Login now</h1>
+        <p id="display"></p>
+        <form id="form">
+            <input type="text" name="text" id="username" placeholder="Your name" required>
+            <input type="password" name="password" id="password" placeholder="Your password" required>
+            <label>
+                <a href="/register" class="register">Create an account</a>
+                <button type="submit" id="button">Sign in</button>
+            </label>
+        </form> 
+    </div>
+    
+    <script src="/js/request.js"></script>
+    <script src="/js/login.js"></script>
+</body>
+</html>

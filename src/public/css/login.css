@@ -1,0 +1,78 @@
+/* #391521 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #391521;
+}
+
+.login-card {
+    background-color: white;
+    padding: 30px;
+    width: 500px;
+}
+
+#display {
+    margin-top: 20px;
+    font-size: 17px;
+    color: red;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+#username, #password {
+    margin: 10px 0;
+    padding: 15px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px 0 black;
+    font-size: 20px;
+}
+
+#username::placeholder, #password::placeholder {
+    font-size: 15px;
+}
+
+#form label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.register {
+    color: rgb(69, 146, 235);
+    font-size: 20px;
+    transition: 0.3s;
+    font-weight: 555;
+}
+
+.register:hover {
+    color: #391521;
+}
+
+#button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    padding: 10px;
+    background-color: #391521;
+    color: white;
+    cursor: pointer;
+}

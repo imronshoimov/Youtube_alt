@@ -1,0 +1,65 @@
+[
+    {
+        "userId": 1,
+        "username": "Imron",
+        "password": "salomhammaga",
+        "email": "contact@email.com",
+        "image": "profil.jpg"
+    },
+    {
+        "userId": 2,
+        "username": "sdfdsf",
+        "password": "sdfdsfdsf",
+        "email": "contact@email.com",
+        "image": "cactus.png"
+    },
+    {
+        "userId": 3,
+        "username": "salom",
+        "password": "sdsfdsf",
+        "email": "contact@email.com",
+        "image": "change.svg"
+    },
+    {
+        "userId": 4,
+        "username": "Imron",
+        "password": "sdfsdf",
+        "email": "contact@email.com",
+        "image": "cactus.png"
+    },
+    {
+        "userId": 5,
+        "username": "sdfdsf",
+        "password": "sdfdsf",
+        "email": "sdfsdf@fsd",
+        "image": "cactus2.png"
+    },
+    {
+        "userId": 6,
+        "username": "Imron",
+        "password": "dfsdfdsf",
+        "email": "imronshoimov125@gmail.com",
+        "image": "ba.jpg"
+    },
+    {
+        "userId": 7,
+        "username": "sdfdsf",
+        "password": "sdfdsf",
+        "email": "contact@email.com",
+        "image": "cactus.png"
+    },
+    {
+        "userId": 8,
+        "username": "Imron",
+        "password": "dsfsdfds",
+        "email": "contact@email.com",
+        "image": "brendan-eich-2-sized.jpg"
+    },
+    {
+        "userId": 9,
+        "username": "dfsdf",
+        "password": "sdfdsf",
+        "email": "imronshoimov125@gmail.com",
+        "image": "dinozavr.jpg"
+    }
+]
