@@ -1,0 +1,58 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+
+}
+
+.container {
+    width: 1880px;
+    margin: 0 auto;
+}
+
+.nav {
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+    }
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 5px 10px;
+    width: 550px;
+    outline-style: none;
+}
+
+.search-button {
+    width: 80px;
+    cursor: pointer;
+}
+
+.search-img {
+    width: 22px;
+    height: 22px;
+}
+
+.upload-img {
+    width: 40px;
+}
