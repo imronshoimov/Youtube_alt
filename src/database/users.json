@@ -2,50 +2,8 @@
     {
         "userId": 1,
         "username": "Imron",
-        "password": "salomhammaga",
+        "password": "1234567",
         "email": "contact@email.com",
         "image": "profil.jpg"
-    },
-    {
-        "userId": 2,
-        "username": "sdfdsf",
-        "password": "sdfdsfdsf",
-        "email": "contact@email.com",
-        "image": "cactus.png"
-    },
-    {
-        "userId": 3,
-        "username": "salom",
-        "password": "sdsfdsf",
-        "email": "contact@email.com",
-        "image": "change.svg"
-    },
-    {
-        "userId": 1,
-        "username": "Imron",
-        "password": "sdfsdf",
-        "email": "contact@email.com",
-        "image": "cactus.png"
-    },
-    {
-        "userId": 2,
-        "username": "Salim ",
-        "password": "Xotam",
-        "email": "contact@email.com",
-        "image": "cactus.png"
-    },
-    {
-        "userId": 3,
-        "username": "sdfsdf",
-        "password": "sdfdsf",
-        "email": "contact@email.com",
-        "image": "ba.jpg"
-    },
-    {
-        "userId": 4,
-        "username": "dfsdfsdf",
-        "password": "sdfdsf",
-        "email": "contact@email.com",
-        "image": "Artboard_(7)_(1).png"
     }
 ]
