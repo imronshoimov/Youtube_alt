@@ -14,13 +14,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #391521;
 }
 
 .register-card {
     background-color: white;
     padding: 30px;
     width: 500px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
 }
 
 #display {
@@ -63,7 +63,7 @@ body {
 }
 
 .login:hover {
-    color: #391521;
+    color: rgb(199, 8, 8);
 }
 
 #button {
@@ -72,7 +72,8 @@ body {
     border: none;
     font-size: 20px;
     padding: 10px;
-    background-color: #391521;
+    background-color: rgb(199, 8, 8);
+    border-radius: 5px;
     color: white;
     cursor: pointer;
 }
