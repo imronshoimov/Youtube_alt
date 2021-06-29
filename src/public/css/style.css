@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+/* width */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 ul {
     list-style: none;
 }
@@ -13,7 +33,7 @@ a {
 }
 
 body {
-
+    overflow: hidden;
 }
 
 .container {
@@ -23,7 +43,7 @@ body {
 
 .nav {
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
-    }
+}
 
 .nav-list {
     display: flex;
@@ -55,4 +75,41 @@ body {
 
 .upload-img {
     width: 40px;
+}
+
+.main {
+    display: flex;
+}
+
+.user-list {
+    width: 300px;
+    height: 93vh;
+    border: 1px solid red;
+    overflow-y: scroll;
+    /* padding: 20px; */
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 20px 0;
+    transition: 0.5s;
+    padding: 20px;
+}
+
+.user-item:hover {
+    background-color: rgba(0,0,0,0.2);
+    color: white;
+}
+
+.user-image {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.user-name {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 10px;
 }
