@@ -26,7 +26,8 @@ body {
 
 .upload-section .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-section {
@@ -37,12 +38,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 50px;
 }
 
 #upload_form {
     width: 100%;
     display: flex;
     flex-direction: column;
+}
+
+#upload_form label {
+    margin-bottom: 30px;
+    font-size: 25px;
 }
 
 #vide_name {
@@ -95,4 +102,53 @@ body {
     border: none;
     outline-style: none;
     cursor: pointer;
+}
+
+.uploaded-section {
+    margin-left: 50px;
+    width: 50%;
+    height: 600px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+    padding: 60px 30px;
+    padding-top: 20px;
+    overflow-y: scroll;
+}
+
+.uploaded-section h2 {
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.vidoe-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-item {
+    margin: 0 10px;
+    position: relative;
+}
+
+.del-button {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: rgba(0,0,0,0.5);
+    outline-style: none;
+    font-size: 35px;
+    padding: 5px 10px;
+    color: white;
+    display: none;
+    cursor: pointer;
+    transition: .3s;
+    z-index: 2;
+}
+
+.video-item:hover .del-button {
+    display: block;
+}
+
+.video-name {
+    font-size: 23px;
+    font-weight: bold;
 }

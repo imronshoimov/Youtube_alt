@@ -11,20 +11,30 @@
     <section class="upload-section">
         <div class="container">
             <div class="form-section">
+                <div>   
+                    
+                </div>
                 <form id="upload_form" action="/api/upload" method="POST">
-                    <input type="text" name="text" id="vide_name" required placeholder="Your video's name">
-                    <input type="file" name="file" id="upload_video">
+                    <label>
+                        <h2>Upload media</h2>
+                    </label>
+                    <input type="text" name="text" id="vide_name" placeholder="Your video's name">
+                    <input type="file" name="file" id="upload_video" required>
                     <button type="submit" id="upload_button">Upload a file</button>
                 </form>
             </div>
             <div class="uploaded-section">
+                <div class="uploaded-title">
+                    <h2>Uploaded vidoes</h2>
+                </div>
                 <ul class="vidoe-list">
                     <li class="video-item">
-                        <video class="upload-video" controls width="250px">
+                        <button class="del-button">&times;</button>
+                        <video class="upload-video" controls width="220px">
                             <source src="/images/video.mp4">
                         </video>
-                        <p>name</p>
-                    </li> 
+                        <p class="video-name" contenteditable="true">name</p>
+                    </li>  
                 </ul>
             </div>
         </div>
