@@ -14,8 +14,10 @@ upload_form.addEventListener('submit', async event => {
     })
     
     if(res) {
-        homep.textContent = "The video uploaded, you may see!"
+        homep.textContent = "The video uploaded, you may see it!"
     }
+
+    // rednerUploadedVideos()
     
     upload_form.reset()
 })
@@ -40,9 +42,19 @@ async function rednerUploadedVideos () {
                 video.setAttribute('height', "120px")
                 source.setAttribute('src', '/' + item.video)
                 name.classList.add('video-name')
+                name.setAttribute('contenteditable', true)
                 console.log(item);
                 button.textContent = "x"
                 name.textContent = item.vide_name
+                
+                button.addEventListener('click', async event => {
+                    let response = await request('/api/upload', 'DELETE', { id: item.videoId })
+                    if (response) {
+                        li.remove()
+                    }
+                })
+
+                
                 
                 video.appendChild(source)
                 li.appendChild(button)

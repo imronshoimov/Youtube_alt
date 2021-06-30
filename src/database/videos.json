@@ -2,13 +2,13 @@
     {
         "videoId": 1,
         "userId": 1,
-        "vide_name": "Rabbit",
-        "video": "video.mp4"
+        "vide_name": "Technology",
+        "video": "data.mp4"
     },
     {
         "videoId": 2,
         "userId": 1,
         "vide_name": "Technology",
-        "video": "data.mp4"
-    } 
+        "video": "video.mp4"
+    }
 ]
