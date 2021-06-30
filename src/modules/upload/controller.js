@@ -30,4 +30,13 @@ const DELETE = (req, res) => {
     }
 }
 
-module.exports = { GET, POST, DELETE }
+const PUT = (req, res) => {
+    let update = model.update(req.body)
+    if(update) {
+        res.status(200).json({message: "The video's name is updated!"})
+    } else {
+        res.status(404).json({message: "The video not found!s"})
+    }
+}
+
+module.exports = { GET, POST, DELETE, PUT }
