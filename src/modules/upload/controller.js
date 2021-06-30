@@ -21,4 +21,13 @@ const POST = (req, res) => {
     }
 }
 
-module.exports = { GET, POST }
+const DELETE = (req, res) => {
+    let del = model.remove(req.body)
+    if(del) {
+        res.status(200).json({ message: 'The vidoe has been deleted!'})
+    } else {
+        res.json({ message: 'Something went wrong!' })
+    }
+}
+
+module.exports = { GET, POST, DELETE }
