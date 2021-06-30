@@ -73,6 +73,13 @@ body {
     height: 22px;
 }
 
+.upload-btn {
+    background-color: transparent;
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+}
+
 .upload-img {
     width: 40px;
 }

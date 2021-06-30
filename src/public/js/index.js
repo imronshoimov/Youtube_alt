@@ -1,4 +1,5 @@
 const userList = document.querySelector('.user-list')
+const uploadBtn = document.querySelector('.upload-btn')
 
 async function renderUsers () {
     let users = await request('users', 'GET')
@@ -21,3 +22,12 @@ async function renderUsers () {
 }
 
 renderUsers()
+
+uploadBtn.addEventListener('click', () => {
+    if (document.cookie) {
+        window.location = "/upload"
+    } else {
+        window.location = "/login"
+    }
+    console.log(document.cookie);
+})
