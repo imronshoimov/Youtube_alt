@@ -56,14 +56,14 @@ body {
 }
 
 .login {
-    color: rgb(69, 146, 235);
+    color: black;
     font-size: 20px;
     transition: 0.3s;
-    font-weight: 555;
+    text-decoration: underline;
 }
 
 .login:hover {
-    color: rgb(199, 8, 8);
+    color: rgb(69, 146, 235);
 }
 
 #button {
