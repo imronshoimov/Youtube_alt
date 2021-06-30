@@ -5,25 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload</title>
+    <link rel="stylesheet" href="/css/upload.css">
 </head>
 <body>
-    <section>
-        <div>
-            <p></p>
-            <form action="" method="POST">
-                <input type="file" name="file" id="upload_video">
-                <button type="submit" id="upload_button">Upload a file</button>
-            </form>
-        </div>
-        <div>
-            <ul class="vidoe-list">
-                <li class="video-item">
-                    <video class="upload-video" controls width="250px">
-                        <source src="/images/video.mp4">
-                    </video>
-                    <p>name</p>
-                </li> 
-            </ul>
+    <section class="upload-section">
+        <div class="container">
+            <div class="form-section">
+                <form id="upload_form" action="/api/upload" method="POST">
+                    <input type="text" name="text" id="vide_name" required placeholder="Your video's name">
+                    <input type="file" name="file" id="upload_video">
+                    <button type="submit" id="upload_button">Upload a file</button>
+                </form>
+            </div>
+            <div class="uploaded-section">
+                <ul class="vidoe-list">
+                    <li class="video-item">
+                        <video class="upload-video" controls width="250px">
+                            <source src="/images/video.mp4">
+                        </video>
+                        <p>name</p>
+                    </li> 
+                </ul>
+            </div>
         </div>
     </section>
 </body>

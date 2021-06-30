@@ -25,7 +25,7 @@ renderUsers()
 
 uploadBtn.addEventListener('click', () => {
     if (document.cookie) {
-        window.location = "/upload"
+        window.location = "/api/upload"
     } else {
         window.location = "/login"
     }
