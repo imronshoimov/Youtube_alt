@@ -7,7 +7,7 @@ const insertVidoe = (data, userId, video) => {
     let videoId = videos.length ? videos[videos.length - 1].videoId + 1 : 1
     let newVidoe = {
         videoId,
-        userId,
+        userId: userId - 0,
         ...data,
         video
     }

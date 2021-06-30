@@ -12,5 +12,19 @@
         "password": "4848",
         "email": "fsdf@dsf",
         "image": "brendan-eich-2-sized.jpg"
+    },
+    {
+        "userId": 3,
+        "username": "Salim",
+        "password": "4848",
+        "email": "fsdf@dsf",
+        "image": "brendan-eich-2-sized.jpg"
+    },
+    {
+        "userId": 4,
+        "username": "MuhammadHusayn Olimjonov",
+        "password": "4848",
+        "email": "fsdf@dsf",
+        "image": "brendan-eich-2-sized.jpg"
     }
 ]
