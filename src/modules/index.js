@@ -4,6 +4,7 @@ const registerRouter = require('./register')
 const uploadRouter = require('./upload')
 const usersRouter = require('./users')
 const videosRouter = require('./videos')
+const downloaRouter = require('./downloads')
 
 module.exports = [
     homeRouter,
@@ -11,5 +12,6 @@ module.exports = [
     registerRouter,
     uploadRouter,
     usersRouter,
-    videosRouter
+    videosRouter,
+    downloaRouter
 ]

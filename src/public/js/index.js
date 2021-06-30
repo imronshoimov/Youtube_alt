@@ -30,7 +30,7 @@ async function renderUsers () {
                     let span = document.createElement('span')
                     let videoUser = document.createElement('p')
                     let videoName = document.createElement('p')
-                    let button = document.createElement('button')
+                    let link = document.createElement('a')
                     let img = document.createElement('img')
 
                     li.classList.add('video-item')
@@ -45,15 +45,14 @@ async function renderUsers () {
                     videoAvatar.src = user.image
                     videoUser.classList.add('video-user')
                     videoName.classList.add('video-name')
-                    button.classList.add('down-button')
-                    button.type = "button"
+                    link.classList.add('down-link')
+                    link.setAttribute('href', '/api/download?video=' + item.video)
                     img.classList.add('down-image')
                     img.src = "/images/download.png"
                     img.alt = "download"
 
                     videoUser.textContent = user.username
                     videoName.textContent = item.vide_name
-                    console.log(item.video);
 
                     video.appendChild(source)
                     span.appendChild(videoUser)
@@ -61,8 +60,8 @@ async function renderUsers () {
                     videoInfo.appendChild(videoAvatar)
                     videoInfo.appendChild(span)
                     videosInfo.appendChild(videoInfo)
-                    button.appendChild(img)
-                    videosInfo.appendChild(button)
+                    link.appendChild(img)
+                    videosInfo.appendChild(link)
                     li.appendChild(video)
                     li.appendChild(videosInfo)
                     vidoeList.appendChild(li)

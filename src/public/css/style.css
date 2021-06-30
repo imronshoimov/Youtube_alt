@@ -170,7 +170,7 @@ body {
     font-weight: 550;
 }
 
-.down-button {
+.down-link {
     align-self: flex-start;
     width: 30px;
     height: 30px;
@@ -182,7 +182,7 @@ body {
     transition: 0.3s;
 }
 
-.down-button:hover {
+.down-link:hover {
     background-color: rgba(0,0,0,0.2);
 }
 
