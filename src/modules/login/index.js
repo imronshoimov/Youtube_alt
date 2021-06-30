@@ -1,7 +1,8 @@
 const router = require('express').Router()
-const { GET } = require('./controller')
+const { GET, POST, checkToken } = require('./controller')
 
 router.route('/login')
-    .get(GET)
+    .get(checkToken, GET)
+    .post(POST)
 
 module.exports = router
