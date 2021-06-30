@@ -11,6 +11,10 @@ upload_form.addEventListener('submit', async event => {
         method: 'POST',
         body: formData
     })
+    
+    if(res) {
+        homep.textContent = "The video uploaded, you may see!"
+    }
 
     upload_form.reset()
 })

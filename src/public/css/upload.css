@@ -39,6 +39,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-right: 50px;
+    position: relative;
 }
 
 #upload_form {
@@ -102,6 +103,15 @@ body {
     border: none;
     outline-style: none;
     cursor: pointer;
+}
+
+.home-page {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    color: blue;
+    text-decoration: underline;
+    font-size: 18px;
 }
 
 .uploaded-section {
