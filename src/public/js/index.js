@@ -3,7 +3,7 @@ const vidoeList = document.querySelector('.vidoe-list')
 const uploadBtn = document.querySelector('.upload-btn')
 
 async function renderUsers () {
-    let users = await request('users', 'GET')
+    let users = await request('/users', 'GET')
     for(let user of users) {
         let li = document.createElement('li')
         let avatar = document.createElement('img')
@@ -17,6 +17,7 @@ async function renderUsers () {
         name.textContent = user.username
 
         li.addEventListener('click', async event => {
+            event.preventDefault()
             vidoeList.textContent = ""  
             let videos = await request('/videos', 'GET')
             for(let item of videos) {
@@ -38,7 +39,7 @@ async function renderUsers () {
                     video.setAttribute('controls', true)
                     video.setAttribute('width', "450px")
                     video.setAttribute('height', "250px")
-                    source.setAttribute('src', item.video)
+                    source.setAttribute('src', '/' + item.video)
                     videosInfo.classList.add('videos-info')
                     videoInfo.classList.add('vidoe-info')
                     videoAvatar.classList.add('video-avatar')
