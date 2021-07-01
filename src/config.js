@@ -1,4 +1,4 @@
 const host = require('./lib/getIp')({ internal: false })
-const PORT = 5300
+const PORT = process.env.PORT || 5300
 
 module.exports = { host, PORT }
