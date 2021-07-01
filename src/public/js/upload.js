@@ -28,8 +28,6 @@ upload_form.addEventListener('submit', async event => {
     upload_form.reset()
 })
 
-console.log();
-
 async function rednerUploadedVideos () {
     let UploadedVideos = await request('/videos', 'GET')
     let id = document.cookie.split('id=')[1] - 0

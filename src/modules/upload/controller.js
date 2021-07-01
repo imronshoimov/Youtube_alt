@@ -12,7 +12,6 @@ const POST = (req, res) => {
     let videoName = video.name.replace(/\s/g, "_").trim()
     video.mv(path.join(process.cwd(), 'src', 'uploads', videoName))
     let payload = jwt.verify(req.cookies.token, SECRET_KEY)
-    console.log(req.body);
     let uploadVideo = model.insertVidoe(req.body, payload, videoName)
     if(uploadVideo) {
         res.status(201).json({ message: "The vide uploaded!", body: uploadVideo })
