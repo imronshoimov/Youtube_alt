@@ -47,7 +47,8 @@ async function renderUsers () {
                     videoUser.classList.add('video-user')
                     videoName.classList.add('video-name')
                     link.classList.add('down-link')
-                    link.setAttribute('href', '/api/download?video=' + item.video)
+                    link.setAttribute('href', '/' + item.video)
+                    link.setAttribute('download', true)
                     img.classList.add('down-image')
                     img.src = "/images/download.png"
                     img.alt = "download"
