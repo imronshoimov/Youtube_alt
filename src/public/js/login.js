@@ -8,7 +8,7 @@ form.onsubmit = async (event) => {
     if (res) {
         display.textContent = res.message
         setTimeout(() => {
-            window.location = '/api/upload'
+            window.location = '/api/media'
         }, 1000)
     } else {
         display.textContent = res.message
