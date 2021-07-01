@@ -90,7 +90,7 @@ async function renderUsers (data) {
         avatar.classList.add('user-image')
         name.classList.add('user-name')
         
-        avatar.setAttribute('src', user.image)
+        avatar.setAttribute('src', '/' + user.image)
         name.textContent = user.username
         
         li.addEventListener('click', async event => {
