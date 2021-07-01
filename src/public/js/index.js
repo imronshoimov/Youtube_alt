@@ -50,7 +50,7 @@ searchInput.addEventListener('keyup', async event => {
                 videosInfo.classList.add('videos-info')
                 videoInfo.classList.add('vidoe-info')
                 videoAvatar.classList.add('video-avatar')
-                videoAvatar.src = user.image
+                videoAvatar.src = '/' + user.image
                 videoUser.classList.add('video-user')
                 videoName.classList.add('video-name')
                 link.classList.add('down-link')
@@ -98,7 +98,7 @@ async function renderUsers (data) {
             vidoeList.textContent = ""  
             let videos = await request('/videos', 'GET')
             for(let item of videos) {
-                if (user.userId === item.userId) {
+                if (user.userId == item.userId) {
                     let li = document.createElement('li')
                     let video = document.createElement('video')
                     let source = document.createElement('source')
@@ -120,7 +120,7 @@ async function renderUsers (data) {
                     videosInfo.classList.add('videos-info')
                     videoInfo.classList.add('vidoe-info')
                     videoAvatar.classList.add('video-avatar')
-                    videoAvatar.src = user.image
+                    videoAvatar.src = '/' + user.image
                     videoUser.classList.add('video-user')
                     videoName.classList.add('video-name')
                     link.classList.add('down-link')
