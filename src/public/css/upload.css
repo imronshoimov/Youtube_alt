@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+/* width */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 a {
     text-decoration: none;
 }
@@ -53,13 +73,13 @@ body {
     font-size: 25px;
 }
 
-#vide_name {
+#video_name {
     padding: 10px;
     font-size: 18px;
     outline-style: none;
 }
 
-#vide_name::placeholder {
+#video_name::placeholder {
     font-size: 17px;
 }
 
@@ -111,7 +131,7 @@ body {
     right: 10%;
     color: blue;
     text-decoration: underline;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .uploaded-section {
@@ -135,7 +155,7 @@ body {
 }
 
 .video-item {
-    margin: 0 10px;
+    margin: 10px;
     position: relative;
 }
 

@@ -26,12 +26,11 @@ const remove = ({ id }) => {
 const update = (data) => {
     let videos = fs.readFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), 'utf-8')
     videos = videos ? JSON.parse(videos) : []
-    let found = videos.find(vid => vid.videoId === data.videoId)
+    let found = videos.find(vid => vid.videoId == data.videoId)
     if(found) {
-        let updated = { ...found, ...data }
-        console.log(updated);
-        // fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), JSON.stringify(updated, null, 4))
-        // return updated
+        found.video_name = data.video_name
+        fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), JSON.stringify(videos, null, 4))
+        return updated
     } else return
 }
 

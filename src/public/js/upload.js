@@ -5,7 +5,7 @@ upload_form.addEventListener('submit', async event => {
     event.preventDefault()
     
     let formData = new FormData()
-    formData.append('vide_name', vide_name.value)
+    formData.append('video_name', video_name.value)
     formData.append('file', upload_video.files[0])
     
     let res = await fetch('/api/upload', {
@@ -16,8 +16,8 @@ upload_form.addEventListener('submit', async event => {
     if(res) {
         homep.textContent = "The video uploaded, you may see it!"
     }
-
-    // rednerUploadedVideos()
+    
+    rednerUploadedVideos()
     
     upload_form.reset()
 })
@@ -50,7 +50,7 @@ async function rednerUploadedVideos () {
                 name.classList.add('video-name')
                 name.setAttribute('contenteditable', true)
                 button.textContent = "x"
-                name.textContent = item.vide_name
+                name.textContent = item.video_name
                 
                 button.addEventListener('click', async event => {
                     let response = await request('/api/upload', 'DELETE', { id: item.videoId })
@@ -58,11 +58,11 @@ async function rednerUploadedVideos () {
                         li.remove() 
                     }
                 })
-
+                
                 edit.addEventListener('click', async event => {
                     event.preventDefault()
-
-                    let edited = await request('/api/upload', 'PUT', { videoId: item.videoId, vide_name: name.textContent })
+                    
+                    let edited = await request('/api/upload', 'PUT', { videoId: item.videoId, video_name: name.textContent })
                 })
                 
                 video.appendChild(source)

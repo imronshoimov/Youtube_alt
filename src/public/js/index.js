@@ -53,7 +53,7 @@ async function renderUsers () {
                     img.alt = "download"
 
                     videoUser.textContent = user.username
-                    videoName.textContent = item.vide_name
+                    videoName.textContent = item.video_name
 
                     video.appendChild(source)
                     span.appendChild(videoUser)
