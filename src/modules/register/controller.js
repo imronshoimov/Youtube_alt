@@ -30,6 +30,7 @@ const POST = (req, res) => {
     let user = model.insertUser(req.body, fileName)
     if(user) {
         res.cookie('token', jwt.sign(user.userId, SECRET_KEY))
+        res.cookie('id', user.userId)
         res.status(201).json({ message: "The user has registered!", body: user })
     } else {
         res.status(401).json({ message: "The user has already exists!" })

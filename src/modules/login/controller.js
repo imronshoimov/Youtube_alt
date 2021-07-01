@@ -29,6 +29,7 @@ const POST = (req, res) => {
     try {
         if(user) {
             res.cookie('token', jwt.sign(user.userId, SECRET_KEY))
+            res.cookie('id', user.userId)
             res.status(200).json({ message: "The user has logged in!", userId: user.id, body: user })
         } else res.status(401).json({ message: "Wrong password or username" })
     } catch (error) {

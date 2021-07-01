@@ -4,11 +4,5 @@
         "userId": 1,
         "video_name": "Rabbit",
         "video": "true.mp4"
-    },
-    {
-        "videoId": 2,
-        "userId": 1,
-        "video_name": "Technology",
-        "video": "data.mp4"
     }
 ]

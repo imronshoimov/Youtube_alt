@@ -85,5 +85,4 @@ uploadBtn.addEventListener('click', () => {
     } else {
         window.location = "/login"
     }
-    console.log(document.cookie);
 })
