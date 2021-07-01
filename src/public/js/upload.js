@@ -16,9 +16,7 @@ upload_form.addEventListener('submit', async event => {
     if(res) {
         homep.textContent = "The video uploaded, you may see it!"
     }
-    
-    rednerUploadedVideos()
-    
+        
     upload_form.reset()
 })
 
