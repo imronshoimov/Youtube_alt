@@ -52,6 +52,10 @@ body {
     padding: 10px;
 }
 
+.nav-item {
+    position: relative;
+}
+
 .nav-form {
     display: flex;
     align-items: center;
@@ -71,6 +75,26 @@ body {
 .search-img {
     width: 22px;
     height: 22px;
+}
+
+.bar-list {
+    position: absolute;
+    background-color: white;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 18px;
+    margin: 5px 0;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+
+.bar-item {
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bar-item:hover {
+    background-color: rgba(0,0,0,0.2);
 }
 
 .upload-btn {

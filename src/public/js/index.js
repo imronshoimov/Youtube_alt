@@ -1,6 +1,22 @@
 const userList = document.querySelector('.user-list')
 const vidoeList = document.querySelector('.vidoe-list')
 const uploadBtn = document.querySelector('.upload-btn')
+const searchInput = document.querySelector('.search-input')
+const navForm = document.querySelector('.nav-form')
+let arr = []
+
+searchInput.addEventListener('input', async event => {
+    event.preventDefault()
+    let videos = await request('/videos', 'GET')
+    let inputValue = searchInput.value
+    let searchResult = videos.filter(value => {
+        return value.video_name.toLowerCase().includes(inputValue)
+    })
+
+    for(let item of searchResult) {
+        console.log(item.video_name);
+    }
+})
 
 async function renderUsers () {
     let users = await request('/users', 'GET')
@@ -8,14 +24,14 @@ async function renderUsers () {
         let li = document.createElement('li')
         let avatar = document.createElement('img')
         let name = document.createElement('p')
-
+        
         li.classList.add('user-item')
         avatar.classList.add('user-image')
         name.classList.add('user-name')
-
+        
         avatar.setAttribute('src', user.image)
         name.textContent = user.username
-
+        
         li.addEventListener('click', async event => {
             event.preventDefault()
             vidoeList.textContent = ""  
@@ -33,7 +49,7 @@ async function renderUsers () {
                     let videoName = document.createElement('p')
                     let link = document.createElement('a')
                     let img = document.createElement('img')
-
+                    
                     li.classList.add('video-item')
                     video.classList.add('upload-video')
                     video.setAttribute('controls', true)
@@ -52,10 +68,10 @@ async function renderUsers () {
                     img.classList.add('down-image')
                     img.src = "/images/download.png"
                     img.alt = "download"
-
+                    
                     videoUser.textContent = user.username
                     videoName.textContent = item.video_name
-
+                    
                     video.appendChild(source)
                     span.appendChild(videoUser)
                     span.appendChild(videoName)
@@ -70,7 +86,7 @@ async function renderUsers () {
                 }
             }
         })
-
+        
         li.appendChild(avatar)
         li.appendChild(name)
         userList.appendChild(li)

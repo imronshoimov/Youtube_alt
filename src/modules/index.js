@@ -11,5 +11,5 @@ module.exports = [
     registerRouter,
     uploadRouter,
     usersRouter,
-    videosRouter 
+    videosRouter
 ]
