@@ -32,6 +32,9 @@ async function rednerUploadedVideos () {
                 let button = document.createElement('button')
                 let video = document.createElement('video')
                 let source = document.createElement('source')
+                let span = document.createElement('span')
+                let edit = document.createElement('button')
+                let editImg = document.createElement('img')
                 let name = document.createElement('p')
                 
                 li.classList.add('video-item')
@@ -41,25 +44,34 @@ async function rednerUploadedVideos () {
                 video.setAttribute('width', "220px")
                 video.setAttribute('height', "120px")
                 source.setAttribute('src', '/' + item.video)
+                edit.classList.add('edit-button')
+                editImg.classList.add('edit-name')
+                editImg.setAttribute('src', '/images/edit.png')
                 name.classList.add('video-name')
                 name.setAttribute('contenteditable', true)
-                console.log(item);
                 button.textContent = "x"
                 name.textContent = item.vide_name
                 
                 button.addEventListener('click', async event => {
                     let response = await request('/api/upload', 'DELETE', { id: item.videoId })
                     if (response) {
-                        li.remove()
+                        li.remove() 
                     }
                 })
 
-                
+                edit.addEventListener('click', async event => {
+                    event.preventDefault()
+
+                    let edited = await request('/api/upload', 'PUT', { videoId: item.videoId, vide_name: name.textContent })
+                })
                 
                 video.appendChild(source)
                 li.appendChild(button)
                 li.appendChild(video)
-                li.appendChild(name)
+                span.appendChild(name)
+                edit.appendChild(editImg)
+                span.appendChild(edit)
+                li.appendChild(span)
                 vidoeList.appendChild(li)
             }
         }

@@ -28,9 +28,10 @@ const update = (data) => {
     videos = videos ? JSON.parse(videos) : []
     let found = videos.find(vid => vid.videoId === data.videoId)
     if(found) {
-        let updated = { ...videos, ...data }
-        fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), JSON.stringify(updated, null, 4))
-        return updated
+        let updated = { ...found, ...data }
+        console.log(updated);
+        // fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), JSON.stringify(updated, null, 4))
+        // return updated
     } else return
 }
 

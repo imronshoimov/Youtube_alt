@@ -162,3 +162,21 @@ body {
     font-size: 23px;
     font-weight: bold;
 }
+
+.video-item span {
+    display: flex;
+    padding: 5px;
+}
+
+.edit-button {
+    margin-left: auto;
+    width: 25px;
+    cursor: pointer;
+    border: none;
+    outline-style: none;
+    background-color: transparent;
+}
+
+.edit-name {
+    width: 100%;
+}
