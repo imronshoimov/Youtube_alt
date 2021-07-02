@@ -19,7 +19,7 @@ const insertVidoe = (data, userId, video) => {
 const remove = ({ id }) => {
     let videos = fs.readFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), 'utf-8')
     videos = videos ? JSON.parse(videos) : []
-    let filtered = videos.filter(video => video.videoId != id)
+    let filtered = videos.filter(video => video.videoId !== id)
     fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), JSON.stringify(filtered, null, 4))
     return filtered  
 }
