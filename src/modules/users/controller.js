@@ -1,6 +1,9 @@
+const fs = require('fs')
+const path = require('path')
+
 const GET = (req, res) => {
-    let users = require('../../database/users.json')
-    return res.send(users)
+    let videos = fs.readFileSync(path.join(process.cwd(), 'src', 'database', 'users.json'))
+    return res.send(videos)
 }
 
 module.exports = { GET }
