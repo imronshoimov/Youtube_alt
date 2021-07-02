@@ -21,7 +21,7 @@ const remove = ({ id }) => {
     videos = videos ? JSON.parse(videos) : []
     let filtered = videos.filter(video => video.videoId !== id)
     fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), JSON.stringify(filtered, null, 4))
-    return videos  
+    // return filtered  
 }
 
 const update = (data) => {
