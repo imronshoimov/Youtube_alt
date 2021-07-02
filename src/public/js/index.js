@@ -158,7 +158,7 @@ renderUsers(request('/users', 'GET'))
 
 uploadBtn.addEventListener('click', () => {
     if (document.cookie) {
-        window.location = "/api/media"
+        window.location = "upload"
     } else {
         window.location = "/login"
     }

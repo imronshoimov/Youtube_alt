@@ -16,7 +16,7 @@ upload_form.addEventListener('submit', async event => {
     formData.append('video_name', video_name.value)
     formData.append('file', upload_video.files[0])
     
-    let res = await fetch('/api/media', {
+    let res = await fetch('/upload', {
         method: 'POST',
         body: formData
     })
@@ -59,7 +59,7 @@ async function rednerUploadedVideos () {
             name.textContent = item.video_name
             
             button.addEventListener('click', async event => {
-                let response = await request('/api/media', 'DELETE', { id: item.videoId })
+                let response = await request('/upload', 'DELETE', { id: item.videoId })
                 if (response) {
                     li.remove() 
                 }
@@ -68,7 +68,7 @@ async function rednerUploadedVideos () {
             edit.addEventListener('click', async event => {
                 event.preventDefault()
                 
-                let edited = await request('/api/media', 'PUT', { videoId: item.videoId, video_name: name.textContent })
+                let edited = await request('/upload', 'PUT', { videoId: item.videoId, video_name: name.textContent })
             })
             
             video.appendChild(source)
