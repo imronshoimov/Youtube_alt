@@ -13,7 +13,8 @@ form.onsubmit = async (event) => {
         
     })
     response = await response.json()
-    if(response) {
+    console.log(response);
+    if(response.message) {
         display.textContent = response.message
         setTimeout(() => {
             window.location = '/upload'
