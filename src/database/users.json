@@ -5,12 +5,5 @@
         "password": "1234567",
         "email": "contact@email.com",
         "image": "profil.jpg"
-    },
-    {
-        "userId": 2,
-        "username": "Salim",
-        "password": "salomhammaga",
-        "email": "sdfsdf@fsd",
-        "image": "brendan-eich-2-sized.jpg"
-    }
+    } 
 ]
