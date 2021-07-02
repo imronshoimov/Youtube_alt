@@ -5,7 +5,7 @@ form.onsubmit = async (event) => {
         password: password.value
     })
 
-    if (res.message) {
+    if (res) {
         display.textContent = res.message
         setTimeout(() => {
             window.location = '/upload'

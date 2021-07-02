@@ -25,7 +25,7 @@ const DELETE = (req, res) => {
     if(del) {
         res.status(200).json({ message: 'The vidoe has been deleted!'})
     } else {
-        res.json({ message: 'Something went wrong!' })
+        res.status(400).json({ message: 'Something went wrong!' })
     }
 }
 
