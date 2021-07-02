@@ -7,12 +7,13 @@ const insertVidoe = (data, userId, video) => {
     let videoId = videos.length ? videos[videos.length - 1].videoId + 1 : 1
     let newVidoe = {
         videoId,
-        userId: userId - 0,
+        userId,
         ...data,
         video
     }
     videos.push(newVidoe)
     fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'videos.json'), JSON.stringify(videos, null, 4))
+    return newVidoe
 }
 
 const remove = ({ id }) => {
