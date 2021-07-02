@@ -22,7 +22,7 @@ upload_form.addEventListener('submit', async event => {
     })
     res = await res.json()
     
-    if(res) {
+    if(res.message) {
         homep.textContent = "The video uploaded, you may see it!"
     }
     
