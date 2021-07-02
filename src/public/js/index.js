@@ -23,57 +23,58 @@ searchInput.addEventListener('keyup', async event => {
         
         li.addEventListener('click', async e => {
             vidoeList.textContent =  " "
-            
             // inputValue.value = " "
             barList.style.display = "none"
             
             let users = await request('/users', 'GET')
             for(let user of users) {
-                let li = document.createElement('li')
-                let video = document.createElement('video')
-                let source = document.createElement('source')
-                let videosInfo = document.createElement('div')
-                let videoInfo = document.createElement('div')
-                let videoAvatar = document.createElement('img')
-                let span = document.createElement('span')
-                let videoUser = document.createElement('p')
-                let videoName = document.createElement('p')
-                let link = document.createElement('a')
-                let img = document.createElement('img')
-                
-                li.classList.add('video-item')
-                video.classList.add('upload-video')
-                video.setAttribute('controls', true)
-                video.setAttribute('width', "450px")
-                video.setAttribute('height', "250px")
-                source.setAttribute('src', '/' + item.video)
-                videosInfo.classList.add('videos-info')
-                videoInfo.classList.add('vidoe-info')
-                videoAvatar.classList.add('video-avatar')
-                videoAvatar.src = '/' + user.image
-                videoUser.classList.add('video-user')
-                videoName.classList.add('video-name')
-                link.classList.add('down-link')
-                link.setAttribute('href', '/' + item.video)
-                link.setAttribute('download', true)
-                img.classList.add('down-image')
-                img.src = "/images/download.png"
-                img.alt = "download"
-                
-                videoUser.textContent = user.username
-                videoName.textContent = item.video_name
-                
-                video.appendChild(source)
-                span.appendChild(videoUser)
-                span.appendChild(videoName)
-                videoInfo.appendChild(videoAvatar)
-                videoInfo.appendChild(span)
-                videosInfo.appendChild(videoInfo)
-                link.appendChild(img)
-                videosInfo.appendChild(link)
-                li.appendChild(video)
-                li.appendChild(videosInfo)
-                vidoeList.appendChild(li)
+                if (user.userId == item.userId) {
+                    let li = document.createElement('li')
+                    let video = document.createElement('video')
+                    let source = document.createElement('source')
+                    let videosInfo = document.createElement('div')
+                    let videoInfo = document.createElement('div')
+                    let videoAvatar = document.createElement('img')
+                    let span = document.createElement('span')
+                    let videoUser = document.createElement('p')
+                    let videoName = document.createElement('p')
+                    let link = document.createElement('a')
+                    let img = document.createElement('img')
+                    
+                    li.classList.add('video-item')
+                    video.classList.add('upload-video')
+                    video.setAttribute('controls', true)
+                    video.setAttribute('width', "450px")
+                    video.setAttribute('height', "250px")
+                    source.setAttribute('src', '/' + item.video)
+                    videosInfo.classList.add('videos-info')
+                    videoInfo.classList.add('vidoe-info')
+                    videoAvatar.classList.add('video-avatar')
+                    videoAvatar.src = '/' + user.image
+                    videoUser.classList.add('video-user')
+                    videoName.classList.add('video-name')
+                    link.classList.add('down-link')
+                    link.setAttribute('href', '/' + item.video)
+                    link.setAttribute('download', true)
+                    img.classList.add('down-image')
+                    img.src = "/images/download.png"
+                    img.alt = "download"
+                    
+                    videoUser.textContent = user.username
+                    videoName.textContent = item.video_name
+                    
+                    video.appendChild(source)
+                    span.appendChild(videoUser)
+                    span.appendChild(videoName)
+                    videoInfo.appendChild(videoAvatar)
+                    videoInfo.appendChild(span)
+                    videosInfo.appendChild(videoInfo)
+                    link.appendChild(img)
+                    videosInfo.appendChild(link)
+                    li.appendChild(video)
+                    li.appendChild(videosInfo)
+                    vidoeList.appendChild(li)
+                }
             }
         })
     }
