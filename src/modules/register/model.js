@@ -10,7 +10,7 @@ const insertUser = (data, image) => {
         let newUser = { userId, ...data, image }
         users.push(newUser)
         fs.writeFileSync(path.join(process.cwd(), 'src', 'database', 'users.json'), JSON.stringify(users, null, 4))
-        delete newUser.password
+        newUser.password = null
         return newUser
     } else return
 }
