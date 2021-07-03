@@ -2,8 +2,10 @@ const userList = document.querySelector('.user-list')
 const vidoeList = document.querySelector('.vidoe-list')
 const uploadBtn = document.querySelector('.upload-btn')
 const searchInput = document.querySelector('.search-input')
-const navForm = document.querySelector('.nav-form')
 const barList = document.querySelector('.bar-list')
+const navForm = document.querySelector('.nav-form')
+const resBtn = document.querySelector('.res-btn')
+const leftBtn = document.querySelector('.left-btn')
 
 async function renderUsers (data) {
     let users = await data
@@ -164,4 +166,17 @@ searchInput.addEventListener('keyup', async event => {
             }
         })
     }
+})
+
+resBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    navForm.classList.add('res-form')
+    searchInput.classList.add('res-input')
+    leftBtn.style.display = "block"
+})
+
+leftBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    navForm.classList.remove('res-form')
+    searchInput.classList.remove('res-input')
 })

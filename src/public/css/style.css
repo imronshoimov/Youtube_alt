@@ -54,11 +54,28 @@ body {
 
 .nav-item {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .nav-form {
     display: flex;
     align-items: center;
+    background-color: white;
+}
+
+.left-btn {
+    margin-left: 10px;
+    width: 45px;
+    height: 100%;
+    border: none;
+    outline-style: none;
+    background-color: transparent;
+    display: none;
+}
+
+.left-img {
+    width: 100%;
 }
 
 .search-input {
@@ -80,7 +97,7 @@ body {
 .bar-list {
     position: absolute;
     background-color: white;
-    margin-top: 10px;
+    top: 120%;
     width: 100%;
     font-size: 18px;
     margin: 5px 0;
@@ -97,7 +114,24 @@ body {
     background-color: rgba(0,0,0,0.2);
 }
 
+.res-btn {
+    width: 80px;
+    cursor: pointer;
+    border: none;
+    outline-style: none;
+    background-color: transparent;
+    display: none;
+}
+
+.res-img {
+    width: 30px;
+    height: 30px;
+}
+
 .upload-btn {
+    margin-left: 5px;
+    padding-left: 10px;
+    margin-top: 7px;
     background-color: transparent;
     border: none;
     outline-style: none;
@@ -212,4 +246,175 @@ body {
 
 .down-image {
     width: 100%;
+}
+
+@media (max-width: 1870px) {
+    .container {
+        width: 1800px;
+    }
+}
+
+@media (max-width: 1800px) {
+    .container {
+        width: 1650px;
+    }
+}
+
+@media (max-width: 1650px) {
+    .container {
+        width: 1500px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .container {
+        width: 1400px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .container {
+        width: 1300px;
+    }
+}
+
+@media (max-width: 1300px) {
+    .container {
+        width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 1100px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: 990px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        width: 900px;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 790px;
+    }
+
+    .search-input {
+        width: 400px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        width: 690px;
+    } 
+
+    .search-input {
+        width: 350px;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        width: 590px;
+    } 
+
+    .nav-form {
+        display: none;
+    }
+
+    .res-form {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -35px;
+        right: -320px;
+        z-index: 1;
+        height: 70px;
+        width: 609px;
+    }
+
+    .res-btn {
+        display: block;
+    }
+    
+    .search-button {
+        display: none;
+    }
+
+    .res-input {
+        background-color: rgba(199, 198, 198, 0.4);
+        border: none;
+        font-size: 25px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        height: 70%;
+    }
+
+    .bar-list {
+        margin-top: 30px;
+        top: 250%;
+        z-index: 1;
+        width: 425px;
+        background-color: white;
+        right: -255px;
+    }
+
+    .search-button:focus .search-input {
+        display: block;
+    }
+
+    .upload-btn {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 490px;
+    } 
+
+    .res-form {
+        width: 590px;
+    }
+
+    .bar-list {
+        width: 410px;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 390px;
+    } 
+
+    .res-form {
+        width: 400px;
+        right: -200px;
+    }
+
+    .bar-list {
+        width: 285px;
+        right: -170px;
+    }
+}
+
+@media (max-width: 390px) {
+    .container {
+        width: 100%;
+    } 
+
+    .res-form {
+        width: 380px;
+        right: -190px;
+    }
 }
