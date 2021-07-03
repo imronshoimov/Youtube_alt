@@ -109,6 +109,7 @@ body {
 
 .bar-list {
     position: absolute;
+    z-index: 10;
     background-color: white;
     top: 120%;
     width: 100%;
@@ -364,6 +365,10 @@ body {
         z-index: 2;
         background-color: white;
         width: 900px;
+    }
+
+    .block {
+        display: block;
     }
 }
 

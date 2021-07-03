@@ -24,14 +24,14 @@ async function renderUsers (data) {
 
         backBtn.addEventListener('click', () => {
             userList.classList.remove('userHidden')
-            backBtn.style.display = "none"
+            backBtn.classList.remove('block')
         })
         
         li.addEventListener('click', async event => {
             event.preventDefault()
             vidoeList.textContent = ""  
             userList.classList.add('userHidden')
-            backBtn.style.display = "block"
+            backBtn.classList.add('block')
             let videos = await request('/videos', 'GET')
             for(let item of videos) {
                 if (user.userId == item.userId) {
