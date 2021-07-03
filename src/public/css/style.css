@@ -34,7 +34,7 @@ a {
 
 body {
     overflow: hidden;
-}
+    }
 
 .container {
     width: 1880px;
@@ -56,6 +56,19 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+}
+
+.back-btn {
+    width: 40px;
+    height: 100%;
+    border: none;
+    outline-style: none;
+    background-color: transparent;
+    display: none;
+}
+
+.back-img {
+    width: 100%;
 }
 
 .nav-form {
@@ -144,6 +157,10 @@ body {
 
 .main {
     display: flex;
+}
+
+.users .videos {
+    position: relative;
 }
 
 .user-list {
@@ -258,6 +275,14 @@ body {
     .container {
         width: 1650px;
     }
+
+    .video-item {
+        width: 40%;
+    }
+
+    .upload-video {
+        width: 100%;
+    }
 }
 
 @media (max-width: 1650px) {
@@ -294,6 +319,14 @@ body {
     .container {
         width: 990px;
     }
+
+    .video-item {
+        width: 80%;
+    }
+
+    .user-list {
+        width: 350px;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -304,11 +337,33 @@ body {
 
 @media (max-width: 900px) {
     .container {
-        width: 790px;
+        width: 800px;
     }
+    
+    .yout-img {
+        margin-left: 15px;
+    } 
 
     .search-input {
         width: 400px;
+    }
+
+    .user-list {
+        background-color: white;
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    }
+
+    .userHidden {
+        display: none;
+    }
+
+    .vidoes {
+        z-index: 2;
+        background-color: white;
+        width: 900px;
     }
 }
 
@@ -380,7 +435,7 @@ body {
 
 @media (max-width: 600px) {
     .container {
-        width: 490px;
+        width: 500px;
     } 
 
     .res-form {

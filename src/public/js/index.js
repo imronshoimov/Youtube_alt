@@ -6,6 +6,7 @@ const barList = document.querySelector('.bar-list')
 const navForm = document.querySelector('.nav-form')
 const resBtn = document.querySelector('.res-btn')
 const leftBtn = document.querySelector('.left-btn')
+const backBtn = document.querySelector('.back-btn')
 
 async function renderUsers (data) {
     let users = await data
@@ -20,10 +21,17 @@ async function renderUsers (data) {
         
         avatar.setAttribute('src', '/' + user.image)
         name.textContent = user.username
+
+        backBtn.addEventListener('click', () => {
+            userList.classList.remove('userHidden')
+            backBtn.style.display = "none"
+        })
         
         li.addEventListener('click', async event => {
             event.preventDefault()
             vidoeList.textContent = ""  
+            userList.classList.add('userHidden')
+            backBtn.style.display = "block"
             let videos = await request('/videos', 'GET')
             for(let item of videos) {
                 if (user.userId == item.userId) {
@@ -111,7 +119,6 @@ searchInput.addEventListener('keyup', async event => {
         
         li.addEventListener('click', async e => {
             vidoeList.textContent =  " "
-            // inputValue.value = " "
             barList.style.display = "none"
             
             let users = await request('/users', 'GET')
